@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuizi i Biologjisë</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Bankë pyetjesh në biologji</p>
+          <h1>Kuizi i Biologjisë</h1>
+          <p class="lede">
+            Kliko një përgjigje dhe aplikacioni të tregon menjëherë nëse është e saktë.
+          </p>
+        </div>
+        <div class="stats-card">
+          <div>
+            <span class="stat-label">Pyetje</span>
+            <strong id="questionCount">0</strong>
+          </div>
+          <div>
+            <span class="stat-label">Saktë</span>
+            <strong id="scoreCorrect">0</strong>
+          </div>
+          <div>
+            <span class="stat-label">Gabim</span>
+            <strong id="scoreWrong">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <label class="jump-control">
+          <span>Shko te</span>
+          <input id="jumpInput" type="number" min="1" step="1" />
+        </label>
+        <button id="jumpButton" type="button">Shko</button>
+        <label class="search-control">
+          <span>Kerko pyetje</span>
+          <input id="searchInput" type="search" placeholder="Shkruaj fjale kyce ose nr." />
+        </label>
+        <button id="searchButton" type="button" class="ghost">Gjej</button>
+        <button id="shuffleButton" type="button" class="ghost">Përziej</button>
+        <button id="restartButton" type="button" class="ghost">Rifillo</button>
+        <button id="reviewButton" type="button" class="ghost">Rishiko gabimet</button>
+      </section>
+
+      <section class="card quiz-card">
+        <div class="card-header">
+          <p id="progressLabel" class="progress-label">Po ngarkohet…</p>
+          <div class="meter" aria-hidden="true">
+            <div id="progressBar" class="meter-fill"></div>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <h2 id="questionText">Po ngarkohen pyetjet…</h2>
+          <p id="feedback" class="feedback"></p>
+        </div>
+
+        <div id="options" class="options-grid"></div>
+
+        <section id="reviewPanel" class="review-panel" hidden>
+          <div class="review-header">
+            <div>
+              <p class="review-eyebrow">Rishikim</p>
+              <h3>Pyetjet e gabuara</h3>
+            </div>
+            <p id="reviewCount" class="review-count">0 gabime</p>
+          </div>
+          <div id="reviewList" class="review-list"></div>
+        </section>
+
+        <div class="nav-row">
+          <button id="prevButton" type="button" class="ghost">Më parë</button>
+          <button id="nextButton" type="button">Tjetra</button>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span class="brand-mark">HALITAJBIO</span>
+        <a href="https://www.halitaj.de" target="_blank" rel="noreferrer">www.halitaj.de</a>
+      </footer>
+    </main>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
